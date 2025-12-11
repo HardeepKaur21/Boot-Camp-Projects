@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #b7dce2">
+    <!-- Solar Wave is a fictional company that has a lot of unsatisfied customers, their landing page is this feedback form -->
+    <h1>Feedback Form about SolarWave</h1>
+    <form action="/actio_page.php" method="post">
+      <!-- Collect the name of the person leaving the record -->
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" /> <br /><br />
+
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" /> <br /><br />
+
+      <!-- This is where the customer can write their complaint -->
+      <label for="solarFeedback">Feedback:</label>
+      <textarea
+        id="solarFeedback"
+        name="solarFeedback"
+        rows="4"
+        cols="50"
+      ></textarea>
+      <br /><br />
+
+      <!-- This is a scale to figure how upset the customer is. 1 is very angry and 5 is not that angry -->
+      <label for="satisfactionScale"
+        >How satisfied are you (5 being best):</label
+      >
+      <select name="satisfactionScale" id="satisfactionScale">
+        <option value="1">1</option>
+        <option value="1">2</option>
+        <option value="1">3</option>
+        <option value="1">4</option>
+        <option value="1">5</option>
+      </select>
+      <br /><br />
+
+      <!-- A place for the customer to submit proof of their experience -->
+      <label for="feedbackFile"
+        >You can include pictures with your complaint here:</label
+      >
+      <input type="file" id="feedbackFile" name="feedbackAttachments" />
+      <br /><br />
+
+      <h5>A summary of your complains (tick what applies):</h5>
+      <input type="checkbox" id="wish1" name="wish1" value="ads" />
+      <label for="wish1">I wish there were less ads.</label> <br />
+
+      <input type="checkbox" id="wish2" name="wish2" value="features" />
+      <label for="wish2"
+        >I wish there was this specific feature I am looking for.</label
+      ><br />
+
+      <input type="checkbox" id="wish3" name="wish3" value="design" />
+      <label for="wish3"
+        >I wish the layout of the app was easier to navigate.</label
+      ><br /><br />
+
+      <input type="submit" value="Submit" />
+      <input type="reset" />
+    </form>
+  </body>
+</html>
