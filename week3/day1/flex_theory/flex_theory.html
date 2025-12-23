@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding Flow Layout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      header {
+        background: #6c5ce7;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #2d3436;
+      }
+
+      .code-example {
+        background: #f4f4f4;
+        border-left: 4px solid #6c5ce7;
+        padding: 10px;
+        margin: 20px 0;
+        font-family: monospace;
+        white-space: pre-wrap;
+      }
+
+      .example-box {
+        border: 2px dotted #6c5ce7;
+        padding: 10px;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Understanding Flow Layout</h1>
+    </header>
+    <main>
+      <h2>What is Flow Layout?</h2>
+      <p>
+        When it comes to layout, CSS acts as a collection of mini-languages,
+        each designed for different layout tasks. These are known as
+        <strong>layout modes</strong>, and there are seven distinct ones. In
+        this lesson, we'll focus on <strong>Flow Layout</strong>, the default
+        layout mode.
+      </p>
+
+      <p>
+        A plain HTML document with no CSS applied exclusively uses Flow Layout.
+        You can think of it as the "Microsoft Word" layout algorithm, intended
+        for document-like content organization.
+      </p>
+
+      <h2>Types of Elements in Flow Layout</h2>
+      <p>Flow Layout categorizes elements into two main types:</p>
+      <ul>
+        <li>
+          <strong>Block elements:</strong> These include
+          <code>&lt;div&gt;</code>, <code>&lt;header&gt;</code>,
+          <code>&lt;p&gt;</code>, and similar tags. They stack vertically,
+          taking up the full width of their container by default.
+        </li>
+        <li>
+          <strong>Inline elements:</strong> These include
+          <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, and
+          <code>&lt;strong&gt;</code>. They flow horizontally, wrapping to the
+          next line when needed.
+        </li>
+      </ul>
+
+      <h3>Changing the Display Property</h3>
+      <p>
+        Each HTML element has a default display type, but we can modify it using
+        the <code>display</code> property. For example:
+      </p>
+      <div class="code-example">a.nav-link { display: block; }</div>
+      <p>
+        The above code transforms a link from its default inline display to
+        block.
+      </p>
+
+      <h2>Behavior of Inline and Block Elements</h2>
+
+      <h3>Inline Elements</h3>
+      <p>Inline elements are "go-with-the-flow" by nature. They:</p>
+      <ul>
+        <li>
+          Can only adjust spacing horizontally using
+          <code>margin-left</code> and <code>margin-right</code>.
+        </li>
+        <li>
+          Do not support layout properties like <code>width</code> or
+          <code>height</code>.
+        </li>
+      </ul>
+
+      <p>
+        However, some elements, like <code>&lt;img&gt;</code>, are exceptions.
+        These are called <strong>replaced elements</strong>. They behave like
+        inline elements but can accept dimensions and impact layout:
+      </p>
+      <div class="code-example">img { width: 300px; height: 200px; }</div>
+
+      <h3>Block Elements</h3>
+      <p>Block elements are "greedy" when it comes to space. They:</p>
+      <ul>
+        <li>
+          Always expand to fill the full width of their container, even if their
+          content only requires less space.
+        </li>
+        <li>Stack vertically, creating a new "block" for each element.</li>
+      </ul>
+
+      <div class="example-box">
+        <h2>Hello World</h2>
+        <p>This heading takes up the full width of its container.</p>
+      </div>
+
+      <h2>Inline-Block: A Hybrid</h2>
+      <p>
+        The <code>inline-block</code> value blends the behaviors of inline and
+        block elements. It allows you to:
+      </p>
+      <ul>
+        <li>Place elements inline, like text.</li>
+        <li>
+          Apply layout properties like <code>width</code> and
+          <code>margin-top</code>.
+        </li>
+      </ul>
+
+      <div class="code-example">
+        strong { display: inline-block; width: 100px; margin-top: 20px;
+        text-align: center; }
+      </div>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>
+          Flow Layout is the default and works well for document-style layouts.
+        </li>
+        <li>
+          Block elements stack vertically and take up the full width of their
+          container.
+        </li>
+        <li>
+          Inline elements flow horizontally and do not support
+          <code>width</code> or <code>height</code>.
+        </li>
+        <li>
+          <code>inline-block</code> allows inline placement with block-level
+          layout capabilities.
+        </li>
+      </ul>
+
+      <h2>Next Steps</h2>
+      <p>
+        In the next lesson, we'll explore <strong>Flexbox</strong>, a more
+        advanced layout mode designed to address the limitations of Flow Layout
+        and enable modern, responsive designs.
+      </p>
+    </main>
+  </body>
+</html>
