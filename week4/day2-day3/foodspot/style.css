@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin: 0;
+}
+
+h3 span {
+  color: red;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+a.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  background-color: red;
+  padding: 15px 20px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* HEADER --------------------------------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header .logo {
+  font-size: 25px;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 20px black;
+}
+
+header .logo span {
+  color: red;
+}
+
+header .navigation {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  margin-right: 30px;
+}
+
+header .navigation a {
+  color: white;
+  text-shadow: 0 0 10px black;
+  text-decoration: none;
+}
+
+header .navigation li a:hover {
+  color: red;
+}
+
+/* BANNER --------------------------------------------- */
+section.banner {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://i.postimg.cc/s29LNR86/bg.jpg);
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.content {
+  max-width: 700px;
+  text-align: center;
+}
+
+div.content h2 {
+  font-size: 55px;
+  margin-bottom: 0px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* Animation! Fade in of h2 tag */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+div.content p {
+  margin: 0;
+}
+
+.banner .content .button:hover {
+  background-color: white;
+  color: red;
+  transform: scale(1.1);
+}
+
+/* ABOUT US --------------------------------------------- */
+section.about {
+  padding: 20px;
+}
+
+div.about-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+div.about-div img {
+  width: 48%;
+  object-fit: cover;
+}
+
+div.about-content {
+  color: black;
+  width: 48%;
+  padding: 30px;
+}
+
+div.about-content h3 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* MENU -------------------------------------------------- */
+section.menu {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+div.title {
+  text-align: center;
+  color: black;
+}
+
+div.title h3 {
+  font-size: 25px;
+}
+
+div.menu-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+div.menu-content div.food-box {
+  width: 300px;
+  border: 15px solid white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin: 30px;
+}
+
+div.menu-content div.food-box img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+div.menu-content div.food-box h4 {
+  margin: 0;
+}
+
+/* EXPERTS ------------------------------------------------- */
+section.experts {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+section.experts h3 {
+  color: black;
+  font-size: 25px;
+}
+
+section.experts p {
+  color: black;
+  margin-bottom: 50px;
+}
+
+div.experts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+div.expert-box {
+  margin: 30px;
+  border: 20px solid white;
+  box-shadow: 0 0 30px rgb(202, 200, 200);
+}
+
+div.expert-box h4 {
+  color: black;
+  margin: 0;
+}
+div.expert-box img {
+  width: 200px;
+  margin-bottom: 9px;
+}
+
+/* TESTIMONIALS ------------------------------------------ */
+section.testimonials {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(https://i.postimg.cc/k5dZs5jR/bg2.jpg);
+  padding: 20px;
+  text-align: center;
+  background-size: cover;
+}
+
+section.testimonials h3 {
+  font-size: 25px;
+}
+
+section.testimonials p {
+  margin-bottom: 35px;
+}
+
+div.testimonials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+div.customer {
+  margin: 30px;
+  background-color: white;
+  padding: 30px;
+  width: 300px;
+}
+
+div.customer p {
+  color: #555;
+  font-style: italic;
+}
+
+div.customer h2 {
+  color: red;
+  font-weight: bold;
+  margin: 0;
+}
+
+div.customer img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 500px;
+}
+
+/* CONTACT US -------------------------------------------------------- */
+section.contact-us {
+  background: url(https://i.postimg.cc/4NmrNq7y/bg3.jpg) no-repeat;
+  background-position: bottom right; /* Moves it to the bottom right */
+  background-size: auto;
+  text-align: center;
+  height: 600px;
+  margin-bottom: 70px;
+}
+
+section.contact-us h3 {
+  color: black;
+  font-size: 25px;
+}
+
+section.contact-us p {
+  color: black;
+  margin-bottom: 70px;
+}
+
+section.contact-us form {
+  background-color: white;
+  text-align: left;
+  box-shadow: 0 0 30px rgb(198, 198, 198);
+  width: 350px;
+  height: 300px;
+  padding: 30px 20px 100px 20px;
+  margin: 70px;
+}
+
+section.contact-us form h3 {
+  font-size: 18px;
+  margin: 20px 10px;
+}
+
+section.contact-us form input,
+section.contact-us form textarea {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  border: 1px solid black;
+}
+
+section.contact-us form a.button {
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* FOOTER ------------------------------------------------------------------------ */
+footer {
+  width: 100%;
+  background-color: red;
+  margin: 0;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer p {
+  padding: 20px 0 0 0;
+  text-align: center;
+}
+
+footer div.icons {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+footer div.icons svg {
+  fill: white;
+  height: 25px;
+}
