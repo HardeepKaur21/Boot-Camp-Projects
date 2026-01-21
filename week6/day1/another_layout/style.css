@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.image-placeholder {
+  background-color: rgb(145, 145, 145);
+  width: 100%;
+  height: 150px;
+  margin: 16px 0;
+}
+
+/* HERO ------------------------------------- */
+header div.hero {
+  text-align: center;
+  background-color: rgb(93, 199, 189);
+  color: white;
+  padding: 40px 50px 50px;
+}
+
+header div.hero h1,
+header div.hero p {
+  margin: 0px;
+}
+
+/* NAV BAR ----------------------------------- */
+header div.navbar {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header div.navbar div.nav-left,
+header div.navbar div.nav-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+header div.navbar div.nav-left span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+header div.navbar div.nav-left ul,
+header div.navbar div.nav-right ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header div.navbar div.nav-left a,
+header div.navbar div.nav-right a {
+  color: rgb(229, 227, 227);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+header div.navbar .nav-toggle {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header div.navbar .nav-toggle {
+    display: block;
+  }
+
+  header div.navbar {
+    position: relative;
+  }
+
+  /* because 2 ids are being used, 2 different menus are 
+  created which should be positioned differently */
+  header div.navbar div.nav-left ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: black;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px 30px;
+  }
+
+  header div.navbar div.nav-right ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+
+    left: 0;
+    right: 0;
+    padding: 50px 30px 20px;
+
+    /* Move the seocnd menu lower */
+    top: 220px;
+  }
+
+  header div.navbar div.nav-right ul a,
+  header div.navbar div.nav-left ul a {
+    font-size: 20px;
+  }
+
+  header div.navbar div.nav-right ul a:hover,
+  header div.navbar div.nav-left ul a:hover {
+    color: rgb(93, 199, 189);
+  }
+
+  header div.navbar div.nav-left ul.active,
+  header div.navbar div.nav-right ul.active {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+/* MAIN ------------------------------------- */
+main.container {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* SIDE BAR */
+main.container div.side-bar {
+  flex: 1;
+  padding: 20px;
+  background-color: rgb(240, 239, 239);
+}
+
+main.container div.side-bar h2 {
+  margin-bottom: 15px;
+}
+
+main.container div.side-bar p {
+  margin: 10px 0 20px;
+}
+
+/* CONTENT */
+main.container div.content {
+  flex: 3;
+}
+
+main.container div.content article {
+  border: 1.5px solid rgb(230, 229, 229);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+main.container div.content article h5 {
+  margin: 5px 0 0;
+  color: gray;
+  font-size: 12px;
+}
+
+/* FOOTER --------------------------------------- */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
