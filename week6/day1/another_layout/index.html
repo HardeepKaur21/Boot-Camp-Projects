@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" class="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="hero">
+        <h1>My Website</h1>
+        <p>A website created by me.</p>
+      </div>
+      <div class="navbar">
+        <!-- left -->
+        <div class="nav-left">
+          <span class="logo">My Website</span>
+          <ul id="nav1">
+            <li><a href="#" class="nav-link">Link</a></li>
+            <li><a href="#" class="nav-link">Link</a></li>
+            <li><a href="#" class="nav-link">Link</a></li>
+          </ul>
+        </div>
+
+        <!-- right -->
+        <div class="nav-right">
+          <ul id="nav2">
+            <li><a href="#" class="nav-link">Login</a></li>
+            <li><a href="#" class="nav-link">Signup</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars nav-toggle" onclick="toggleNavBar()"></i>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="side-bar">
+        <h2>About Me</h2>
+        <h3>Photo of me:</h3>
+        <div class="image-placeholder"></div>
+        <p>
+          Some text about me in lorem ipsum dolor sit amet consectetur
+          adipisicing elit.
+        </p>
+
+        <h3>More Text</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="image-placeholder"></div>
+        <div class="image-placeholder"></div>
+        <div class="image-placeholder"></div>
+      </div>
+
+      <div class="content">
+        <!-- Article 1 -->
+        <article>
+          <h2>TITLE HEADING</h2>
+          <h5>Title Description Dec 7, 2017</h5>
+          <div class="image-placeholder"></div>
+          <p>
+            Some text.. <br />
+
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni at
+            perferendis praesentium sapiente repellendus!
+          </p>
+        </article>
+
+        <!-- Article 2 -->
+        <article>
+          <h2>TITLE HEADING</h2>
+          <h5>Title Description Dec 7, 2017</h5>
+          <div class="image-placeholder"></div>
+          <p>
+            Some text..<br />
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni at
+            perferendis praesentium sapiente repellendus!
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <p>Footer</p>
+    </footer>
+
+    <script>
+      // IDS ARE UNIQUE
+      function toggleNavBar() {
+        const nav1 = document.getElementById("nav1");
+        const nav2 = document.getElementById("nav2");
+        nav1.classList.toggle("active");
+        nav2.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
