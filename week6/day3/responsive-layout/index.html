@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech News</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" class="stylesheet" />
+  </head>
+  <body>
+    <!-- HEADER --------------------------------------- -->
+    <header>
+      <div class="title">
+        <h1>QuantumTech</h1>
+        <p>A website created by Hardeep Kaur Gill</p>
+      </div>
+
+      <div class="logo-links">
+        <a href="#" class="logo">Harr<span>Website</span></a>
+        <i class="fa-solid fa-bars burger" onClick="toggleNavBar()"></i>
+        <div id="links" class="links">
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Login</a>
+          <a href="#" class="signup">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN ----------------------------------------- -->
+    <main>
+      <div class="content">
+        <!-- SIDE-BAR  -->
+        <div class="side-bar">
+          <h2>About Us:</h2>
+          <h3>Photo of us:</h3>
+          <img src="team.webp" alt="team" />
+          <p>
+            We are super passionate about tech. We write anything new we learn
+            online in a simple format for you to understand.
+          </p>
+          <h3>MORE ARTICLES</h3>
+          <p>
+            Here are some more super cool articles for you to read (no titles
+            provided just images).
+          </p>
+          <img src="article1.png" alt="someone typing" />
+          <img src="article2.jpg" alt="robot typing" />
+          <img src="article3.png" alt="generic tech background" />
+        </div>
+
+        <!-- ARTICLES -->
+        <div class="articles">
+          <article>
+            <h2>How Artificial Intelligence is Reshaping Everyday Life</h2>
+            <time>Dec 7, 2017</time>
+            <img
+              src="ai.jpg"
+              alt="AI article image - AI bot and human facing each other"
+            />
+            <p class="readit">READ IT!</p>
+            <p>
+              This is some super cool article on AI. Worth your read. You will
+              learn so much from this. All recent news about AI in simple words.
+            </p>
+          </article>
+
+          <article>
+            <h2>Quantum Computing: The Next Big Leap in Technology?"</h2>
+            <time>Dec 7, 2017</time>
+            <img
+              src="quantum.webp"
+              alt="A quantum computer in all its glory."
+            />
+            <p class="readit">READ IT!</p>
+            <p>
+              This is some super cool article on Quantum Computers. Another
+              article worth your read. You will learn so much from this. Updates
+              on quantum computers in simple terms.
+            </p>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER --------------------------------------- -->
+    <footer>
+      <p>Want to write an article for us?</p>
+      <p>Contact us <a href="#">here</a>.</p>
+      <p class="tribute">Inspired by Arnold Santos' work</p>
+    </footer>
+
+    <script>
+      function toggleNavBar() {
+        const nav = document.getElementById("links");
+        nav.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
